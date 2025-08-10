@@ -38,7 +38,7 @@ if __name__ == "__main__":
                                 print(f"Error copying {src_img} to {dst_img}: {e}")
             
             if os.name == 'posix':
-                cmd = f"CUDA_VISIBLE_DEVICES=1 python train_single.py --name {class_name} --input {class_path} --error {error_dataset_dir}"
+                cmd = f"CUDA_VISIBLE_DEVICES=0 python train_single.py --name {class_name} --input {class_path} --error {error_dataset_dir}"
             else:
                 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
                 cmd = f"python train_single.py --name {class_name} --input {class_path} --error {error_dataset_dir}"

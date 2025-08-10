@@ -20,7 +20,7 @@ anomalib install -v
 - input: 训练集数据目录（仅正样本）
 - error: 可选，验证集数据目录（仅负样本）
 
-示例：`python -u train_single.py --name AMD_R5 --input datasets/AMD-INTEL/Sub_AMD/R5`
+示例：`python -u train_single.py --name amd_r7ai --input datasets/amd_r7ai --error datasets/error_for_amd_r7ai`
 
 备注：
 - 模型保存在当前目录下的weights目录中，以模型名称为子目录名。
